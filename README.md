@@ -7,9 +7,15 @@ and the finance and research modules will want their own bulk sources later.
 Putting market data inside `odin-trading/` would mean a second copy the day a
 second module wants it.
 
-**This is not a git repository.** The contents are large, re-downloadable, and
-mostly not ours. What *is* tracked lives in `odin-platform/DATA_LAYOUT.md` —
-the layout, the naming conventions, and the rules below.
+**This became a git repository on 2026-08-01**, reversing the original
+design on purpose. "Not a git repo" was written when the contents were
+"large, re-downloadable" *and* OneDrive was the live backup. OneDrive was
+retired (platform REVIEW_LOG R-23 F-3), which would have left the archive
+with no backup but a re-download — and the MANIFEST provenance chain with
+no history at all. At 27MB the "large" premise no longer holds; revisit
+with git-lfs if a future module's data actually gets big. `_incoming/`
+stays untracked by rule: staging is emptied after extraction, never
+committed.
 
 ## Layout
 
