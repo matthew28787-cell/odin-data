@@ -62,8 +62,9 @@ quarterly/
 ```
 
 **Only 2026Q1 has been published** as of 2026-07-31. Q2 was expected at the end
-of June but is not in Kraken's Drive folder. Check again before assuming the
-data reaches further than it does.
+of June but is not in Kraken's Drive folder. **Re-checked 2026-08-01: still
+absent from both the OHLCVT and the trade-data quarterly folders** (both end at
+Q1 2026). Check again before assuming the data reaches further than it does.
 
 One directory per quarter, same filenames as the base archive. Do not rename —
 the loader keys off Kraken's convention.
@@ -72,7 +73,10 @@ the loader keys off Kraken's convention.
 
 | Quarter | Files | Rows (15m) | Covers | Downloaded | Seam checked |
 |---|---|---|---|---|---|
-| _(none yet)_ | | | | | |
+| 2026Q1 | XBTUSD_15/60/1440 | 8,639 | 2026-01-01 00:00 → 2026-03-31 23:45 | 2026-07-31 | 2026-07-31 by hand; 2026-08-01 by `load_merged` |
+
+The 2026Q1 15-minute series has one missing bar (2026-02-04 11:15) — no trades
+that interval, per Kraken's convention; `gaps.py` handles it as normal.
 
 ## Coverage after merge
 
@@ -80,7 +84,7 @@ the loader keys off Kraken's convention.
 |---|---|
 | Base archive | 2013-10-06 → 2025-12-31 |
 | 2026Q1 | 2026-01-01 → 2026-03-31 |
-| 2026Q2 | **not published** |
+| 2026Q2 | **not published** (re-checked 2026-08-01) |
 | REST `/public/OHLC` | trailing ~7.5 days (720 bars) |
 | **Gap remaining** | **2026-04-01 → ~2026-07-24** (roughly four months) |
 
