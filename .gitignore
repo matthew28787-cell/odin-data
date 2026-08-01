@@ -1,0 +1,7 @@
+# AppleDouble sync junk
+._*
+.DS_Store
+
+# Download staging is emptied after extraction; never commit its contents
+market/kraken/_incoming/*
+!market/kraken/_incoming/.gitkeep

@@ -1,0 +1,3 @@
+# Data is text too. LF everywhere, no binaries yet.
+* text=auto eol=lf
+*.zip binary
