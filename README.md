@@ -54,12 +54,3 @@ file the trading module actually uses is about 27 MB.
 **4. Nothing here is a secret.** Credentials live in each module's `.env`.
 If something sensitive ever needs storing, it does not go in a directory whose
 whole purpose is being shared across modules.
-
-## A note on OneDrive
-
-This tree sits inside a OneDrive-synced folder. That is fine for the working
-files — the BTC/USD 15-minute archive is ~27 MB — but **do not leave multi-GB
-downloads in `_incoming/`**. Sync them once and OneDrive will keep doing it.
-
-Download bulk archives somewhere outside OneDrive (`C:\Temp\` is fine), extract
-only what is needed, and copy just those files in.
